@@ -4,7 +4,10 @@
 
 A project created to provide more flexible customization by building layouts using only Tailwind in NiceGUI.
 
-#### [한국어](README_KR.md) | English
+#### English | [한국어](README_KR.md)
+
+![nicegui-tailwind-layout](docs/templates.gif)
+
 </div>
 
 ## Common Settings
@@ -32,7 +35,6 @@ ui.query(".nicegui-content").style("padding: 0; overflow: hidden;")
 ### 2 Column A ([source](templates/2_column_a.py))
 ![2 Column A](docs/2_column_a.png)
 
-A basic 2-column layout with a sidebar on the left and main content on the right.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
@@ -47,7 +49,6 @@ def app():
 ### 2 Column B ([source](templates/2_column_b.py))
 ![2 Column B](docs/2_column_b.png)
 
-A 2-column layout with header and footer. Header at the top, footer at the bottom, and sidebar with main content in the center.
 ```python
 def app():
     with ui.element("div").classes("flex flex-col w-full h-screen"):
@@ -68,7 +69,6 @@ def app():
 ### 2 Column C ([source](templates/2_column_c.py))
 ![2 Column C](docs/2_column_c.png)
 
-A 2-column layout where the sidebar takes up the full height on the left, with header, content, and footer arranged on the right.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
@@ -93,7 +93,6 @@ def app():
 ### 3 Column A ([source](templates/3_column_a.py))
 ![3 Column A](docs/3_column_a.png)
 
-A 3-column layout with sidebars on both sides and main content in the center.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
@@ -111,7 +110,6 @@ def app():
 ### 3 Column B ([source](templates/3_column_b.py))
 ![3 Column B](docs/3_column_b.png)
 
-A 3-column layout with header and footer. Header at the top, footer at the bottom, and both sidebars with main content in the center.
 ```python
 def app():
     with ui.element("div").classes("flex flex-col w-full h-screen"):
@@ -141,7 +139,6 @@ def app():
 ### 3 Column C ([source](templates/3_column_c.py))
 ![3 Column C](docs/3_column_c.png)
 
-A 3-column layout where both sidebars take up the full height, with header, content, and footer arranged in the center.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
@@ -171,7 +168,6 @@ def app():
 ### 4 Column A ([source](templates/4_column_a.py))
 ![4 Column A](docs/4_column_a.png)
 
-A 4-column layout with a menubar and sidebars on both sides. Icon menubar on the left, both sidebars, and main content in the center.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
@@ -195,7 +191,6 @@ def app():
 ### 4 Column B ([source](templates/4_column_b.py))
 ![4 Column B](docs/4_column_b.png)
 
-A 4-column layout with header and footer. Header at the top, footer at the bottom, and menubar, both sidebars, and main content in the center.
 ```python
 def app():
     with ui.element("div").classes("flex flex-col w-full h-screen"):
@@ -232,7 +227,6 @@ def app():
 ### 4 Column C ([source](templates/4_column_c.py))
 ![4 Column C](docs/4_column_c.png)
 
-A 4-column layout where the menubar and both sidebars take up the full height, with header, content, and footer arranged in the center.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):

@@ -5,6 +5,9 @@
 NiceGUI에서 Tailwind만을 활용해 레이아웃을 구성하여 보다 자유롭게 커스터마이징할 수 있도록 만든 프로젝트입니다.
 
 #### [English](README.md) | 한국어
+
+![nicegui-tailwind-layout](docs/templates.gif)
+
 </div>
 
 ## 공통 설정
@@ -32,7 +35,6 @@ ui.query(".nicegui-content").style("padding: 0; overflow: hidden;")
 ### 2 Column A ([source](templates/2_column_a.py))
 ![2 Column A](docs/2_column_a.png)
 
-기본적인 2단 레이아웃입니다. 좌측에 사이드바가 있고 우측에 메인 콘텐츠가 있습니다.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
@@ -47,7 +49,6 @@ def app():
 ### 2 Column B ([source](templates/2_column_b.py))
 ![2 Column B](docs/2_column_b.png)
 
-헤더와 푸터가 있는 2단 레이아웃입니다. 상단에 헤더, 하단에 푸터, 중앙에 사이드바와 메인 콘텐츠가 있습니다.
 ```python
 def app():
     with ui.element("div").classes("flex flex-col w-full h-screen"):
@@ -68,7 +69,6 @@ def app():
 ### 2 Column C ([source](templates/2_column_c.py))
 ![2 Column C](docs/2_column_c.png)
 
-사이드바가 좌측 전체 높이를 차지하고, 우측에 헤더, 콘텐츠, 푸터가 배치된 2단 레이아웃입니다.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
@@ -93,7 +93,6 @@ def app():
 ### 3 Column A ([source](templates/3_column_a.py))
 ![3 Column A](docs/3_column_a.png)
 
-좌우 사이드바가 있는 3단 레이아웃입니다. 중앙에 메인 콘텐츠가 있습니다.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
@@ -111,7 +110,6 @@ def app():
 ### 3 Column B ([source](templates/3_column_b.py))
 ![3 Column B](docs/3_column_b.png)
 
-헤더와 푸터가 있는 3단 레이아웃입니다. 상단에 헤더, 하단에 푸터, 중앙에 좌우 사이드바와 메인 콘텐츠가 있습니다.
 ```python
 def app():
     with ui.element("div").classes("flex flex-col w-full h-screen"):
@@ -141,7 +139,6 @@ def app():
 ### 3 Column C ([source](templates/3_column_c.py))
 ![3 Column C](docs/3_column_c.png)
 
-좌우 사이드바가 전체 높이를 차지하고, 중앙에 헤더, 콘텐츠, 푸터가 배치된 3단 레이아웃입니다.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
@@ -171,7 +168,6 @@ def app():
 ### 4 Column A ([source](templates/4_column_a.py))
 ![4 Column A](docs/4_column_a.png)
 
-메뉴바와 좌우 사이드바가 있는 4단 레이아웃입니다. 좌측에 아이콘 메뉴바, 좌우 사이드바, 중앙에 메인 콘텐츠가 있습니다.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
@@ -195,7 +191,6 @@ def app():
 ### 4 Column B ([source](templates/4_column_b.py))
 ![4 Column B](docs/4_column_b.png)
 
-헤더와 푸터가 있는 4단 레이아웃입니다. 상단에 헤더, 하단에 푸터, 중앙에 메뉴바, 좌우 사이드바, 메인 콘텐츠가 있습니다.
 ```python
 def app():
     with ui.element("div").classes("flex flex-col w-full h-screen"):
@@ -232,7 +227,6 @@ def app():
 ### 4 Column C ([source](templates/4_column_c.py))
 ![4 Column C](docs/4_column_c.png)
 
-메뉴바와 좌우 사이드바가 전체 높이를 차지하고, 중앙에 헤더, 콘텐츠, 푸터가 배치된 4단 레이아웃입니다.
 ```python
 def app():
     with ui.element("div").classes("flex w-full h-screen"):
