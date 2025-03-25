@@ -4,7 +4,7 @@
 
 NiceGUI에서 Tailwind만을 활용해 레이아웃을 구성하여 보다 자유롭게 커스터마이징할 수 있도록 만든 프로젝트입니다.
 
-#### English | [한국어](docs/README_KR.md)
+#### [English](README.md) | 한국어
 </div>
 
 ## 공통 설정
