@@ -1,14 +1,4 @@
-from email.mime import base
 from nicegui import ui
-
-# ui.add_head_html("""
-#     <style type="text/tailwindcss">
-#         .nicegui-content {
-#             padding: 0;
-#             overflow: hidden;
-#         }
-#     </style>
-# """)
 
 
 def app():
