@@ -1,9 +1,7 @@
 [project]
 name = "nicegui-tailwind-layout"
 version = "0.1.0"
-description = "Add your description here"
+description = "A collection of responsive layout templates for NiceGUI applications using Tailwind CSS, providing flexible and customizable UI layouts with support for multiple columns, sidebars, headers, and footers."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "nicegui>=2.13.0",
-]
+dependencies = ["nicegui>=2.13.0"]

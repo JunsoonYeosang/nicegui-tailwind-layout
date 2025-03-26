@@ -118,7 +118,7 @@ def app():
             ui.label("Header").classes("text-xl")
 
         # Main
-        with ui.element("div").classes("flex flex-1"):
+        with ui.element("div").classes("flex grow"):
             # Left Sidebar
             with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
                 ui.label("Left Sidebar").classes("text-xl")
@@ -199,7 +199,7 @@ def app():
             ui.label("Header").classes("text-xl")
 
         # Main
-        with ui.element("div").classes("flex flex-1"):
+        with ui.element("div").classes("flex grow"):
             # MenuBar
             with ui.element("div").classes(
                 "flex flex-col w-xs bg-base-400 p-4 items-center justify-start gap-4"
